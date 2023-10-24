@@ -25,6 +25,15 @@
 					<div class="card">
 						<div class="card-header">
 							<h5 class="card-header-text">Informasi Transaksi Beras</h5>
+							<?php if ($this->session->userdata('success')) {
+							?>
+								<div class="alert alert-success alert-dismissible">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+									<h5><i class="ti-check"></i> Alert!</h5>
+									<?= $this->session->userdata('success') ?>
+								</div>
+							<?php
+							} ?>
 						</div>
 						<div class="card-block accordion-block">
 							<div id="accordion" role="tablist" aria-multiselectable="true">
@@ -50,6 +59,7 @@
 															<li><i class="fa fa-trash close-card"></i></li>
 														</ul>
 													</div>
+
 												</div>
 												<div class="card-block table-border-style">
 													<div class="table-responsive">
@@ -100,7 +110,7 @@
 																				}
 																				?>
 																			</td>
-																			<td class="text-center"> <a href="<?= base_url('Reseller/cTransaksiPadi/detail/' . $value->id_transaksi) ?>" class="btn waves-effect waves-light btn-warning">
+																			<td class="text-center"> <a href="<?= base_url('Reseller/cTransaksiBeras/detail/' . $value->id_transaksi) ?>" class="btn waves-effect waves-light btn-warning">
 																					Detail Pesanan
 																				</a></td>
 																		</tr>
@@ -189,7 +199,7 @@
 																				}
 																				?>
 																			</td>
-																			<td class="text-center"> <a href="<?= base_url('Reseller/cTransaksiPadi/detail/' . $value->id_transaksi) ?>" class="btn waves-effect waves-light btn-warning">
+																			<td class="text-center"> <a href="<?= base_url('Reseller/cTransaksiBeras/detail/' . $value->id_transaksi) ?>" class="btn waves-effect waves-light btn-warning">
 																					Detail Pesanan
 																				</a></td>
 																		</tr>
@@ -278,7 +288,7 @@
 																				}
 																				?>
 																			</td>
-																			<td class="text-center"> <a href="<?= base_url('Reseller/cTransaksiPadi/detail/' . $value->id_transaksi) ?>" class="btn waves-effect waves-light btn-warning">
+																			<td class="text-center"> <a href="<?= base_url('Reseller/cTransaksiBeras/detail/' . $value->id_transaksi) ?>" class="btn waves-effect waves-light btn-warning">
 																					Detail Pesanan
 																				</a></td>
 																		</tr>
@@ -367,7 +377,7 @@
 																				}
 																				?>
 																			</td>
-																			<td class="text-center"> <a href="<?= base_url('Reseller/cTransaksiPadi/detail/' . $value->id_transaksi) ?>" class="btn waves-effect waves-light btn-warning">
+																			<td class="text-center"> <a href="<?= base_url('Reseller/cTransaksiBeras/detail/' . $value->id_transaksi) ?>" class="btn waves-effect waves-light btn-warning">
 																					Detail Pesanan
 																				</a></td>
 																		</tr>
@@ -396,7 +406,7 @@
 										<div class="accordion-content accordion-desc">
 											<div class="card">
 												<div class="card-header">
-													<h5>Informasi Pesanan Selesao</h5>
+													<h5>Informasi Pesanan Selesai</h5>
 													<div class="card-header-right">
 														<ul class="list-unstyled card-option">
 															<li><i class="fa fa fa-wrench open-card-option"></i></li>
@@ -424,7 +434,7 @@
 																<?php
 																$no = 1;
 																foreach ($transaksi as $key => $value) {
-																	if ($value->status_transaksi == '4	') {
+																	if ($value->status_transaksi == '4') {
 
 																?>
 																		<tr>
@@ -456,7 +466,7 @@
 																				}
 																				?>
 																			</td>
-																			<td class="text-center"> <a href="<?= base_url('Reseller/cTransaksiPadi/detail/' . $value->id_transaksi) ?>" class="btn waves-effect waves-light btn-warning">
+																			<td class="text-center"> <a href="<?= base_url('Reseller/cTransaksiBeras/detail/' . $value->id_transaksi) ?>" class="btn waves-effect waves-light btn-warning">
 																					Detail Pesanan
 																				</a></td>
 																		</tr>

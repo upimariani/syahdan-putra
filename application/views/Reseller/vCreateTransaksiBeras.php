@@ -65,7 +65,7 @@
 											<div class="row">
 												<div class="col-lg-6">
 													<div class="form-group">
-														<label for="exampleInputEmail1">Stok Supplier</label>
+														<label for="exampleInputEmail1">Stok</label>
 														<input type="text" name="stok" class="stok form-control" id="exampleInputEmail1" readonly>
 													</div>
 												</div>

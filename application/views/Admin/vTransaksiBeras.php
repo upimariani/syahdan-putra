@@ -5,10 +5,8 @@
 			<div class="row align-items-center">
 				<div class="col-md-8">
 					<div class="page-header-title">
-						<h5 class="m-b-10">Transaksi Padi</h5>
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-							Tambah Data Transaksi Padi
-						</button>
+						<h5 class="m-b-10">Transaksi Beras</h5>
+
 					</div>
 				</div>
 
@@ -24,7 +22,7 @@
 				<div class="page-body">
 					<div class="card">
 						<div class="card-header">
-							<h5 class="card-header-text">Informasi Transaksi Padi</h5>
+							<h5 class="card-header-text">Informasi Transaksi Beras</h5>
 						</div>
 						<div class="card-block accordion-block">
 							<div id="accordion" role="tablist" aria-multiselectable="true">
@@ -66,7 +64,7 @@
 															<thead>
 																<tr>
 																	<th>No</th>
-																	<th>Nama Supplier</th>
+																	<th>Nama Reseller</th>
 																	<th>Tanggal Proses</th>
 																	<th>Total Transaksi</th>
 																	<th>Status Pesan</th>
@@ -77,39 +75,39 @@
 																<?php
 																$no = 1;
 																foreach ($transaksi as $key => $value) {
-																	if ($value->status_pesan == '0') {
+																	if ($value->status_transaksi == '0') {
 
 																?>
 																		<tr>
 																			<td><?= $no++ ?></td>
-																			<td><?= $value->nama_supplier ?></td>
-																			<td><?= $value->tgl_pesan ?></td>
-																			<td>Rp. <?= number_format($value->total_pesan) ?></td>
+																			<td><?= $value->nama_user ?></td>
+																			<td><?= $value->tgl_transaksi ?></td>
+																			<td>Rp. <?= number_format($value->total_transaksi) ?></td>
 																			<td><?php
-																				if ($value->status_pesan == '0') {
+																				if ($value->status_transaksi == '0') {
 																				?>
 																					<span class="badge badge-danger">Belum Bayar</span>
 																				<?php
-																				} else if ($value->status_pesan == '1') {
+																				} else if ($value->status_transaksi == '1') {
 																				?>
 																					<span class="badge badge-warning">Menunggu Konfirmasi</span>
 																				<?php
-																				} else if ($value->status_pesan == '2') {
+																				} else if ($value->status_transaksi == '2') {
 																				?>
 																					<span class="badge badge-info">Pesanan Diproses</span>
 																				<?php
-																				} else if ($value->status_pesan == '3') {
+																				} else if ($value->status_transaksi == '3') {
 																				?>
 																					<span class="badge badge-primary">Pesanan Dikirim</span>
 																				<?php
-																				} else if ($value->status_pesan == '4') {
+																				} else if ($value->status_transaksi == '4') {
 																				?>
 																					<span class="badge badge-success">Selesai</span>
 																				<?php
 																				}
 																				?>
 																			</td>
-																			<td class="text-center"> <a href="<?= base_url('Admin/cTransaksiPadi/detail/' . $value->id_pesan) ?>" class="btn waves-effect waves-light btn-warning">
+																			<td class="text-center"> <a href="<?= base_url('Admin/cTransaksiBeras/detail/' . $value->id_transaksi) ?>" class="btn waves-effect waves-light btn-warning">
 																					Detail Pesanan
 																				</a></td>
 																		</tr>
@@ -155,7 +153,7 @@
 															<thead>
 																<tr>
 																	<th>No</th>
-																	<th>Nama Supplier</th>
+																	<th>Nama Reseller</th>
 																	<th>Tanggal Proses</th>
 																	<th>Total Transaksi</th>
 																	<th>Status Pesan</th>
@@ -166,39 +164,39 @@
 																<?php
 																$no = 1;
 																foreach ($transaksi as $key => $value) {
-																	if ($value->status_pesan == '1') {
+																	if ($value->status_transaksi == '1') {
 
 																?>
 																		<tr>
 																			<td><?= $no++ ?></td>
-																			<td><?= $value->nama_supplier ?></td>
-																			<td><?= $value->tgl_pesan ?></td>
-																			<td>Rp. <?= number_format($value->total_pesan) ?></td>
+																			<td><?= $value->nama_user ?></td>
+																			<td><?= $value->tgl_transaksi ?></td>
+																			<td>Rp. <?= number_format($value->total_transaksi) ?></td>
 																			<td><?php
-																				if ($value->status_pesan == '0') {
+																				if ($value->status_transaksi == '0') {
 																				?>
 																					<span class="badge badge-danger">Belum Bayar</span>
 																				<?php
-																				} else if ($value->status_pesan == '1') {
+																				} else if ($value->status_transaksi == '1') {
 																				?>
 																					<span class="badge badge-warning">Menunggu Konfirmasi</span>
 																				<?php
-																				} else if ($value->status_pesan == '2') {
+																				} else if ($value->status_transaksi == '2') {
 																				?>
 																					<span class="badge badge-info">Pesanan Diproses</span>
 																				<?php
-																				} else if ($value->status_pesan == '3') {
+																				} else if ($value->status_transaksi == '3') {
 																				?>
 																					<span class="badge badge-primary">Pesanan Dikirim</span>
 																				<?php
-																				} else if ($value->status_pesan == '4') {
+																				} else if ($value->status_transaksi == '4') {
 																				?>
 																					<span class="badge badge-success">Selesai</span>
 																				<?php
 																				}
 																				?>
 																			</td>
-																			<td class="text-center"> <a href="<?= base_url('Admin/cTransaksiPadi/detail/' . $value->id_pesan) ?>" class="btn waves-effect waves-light btn-warning">
+																			<td class="text-center"> <a href="<?= base_url('Admin/cTransaksiBeras/detail/' . $value->id_transaksi) ?>" class="btn waves-effect waves-light btn-warning">
 																					Detail Pesanan
 																				</a></td>
 																		</tr>
@@ -227,7 +225,7 @@
 										<div class="accordion-content accordion-desc">
 											<div class="card">
 												<div class="card-header">
-													<h5>Informasi Pesanan Belum Bayar</h5>
+													<h5>Informasi Pesanan Diproses</h5>
 													<div class="card-header-right">
 														<ul class="list-unstyled card-option">
 															<li><i class="fa fa fa-wrench open-card-option"></i></li>
@@ -244,7 +242,7 @@
 															<thead>
 																<tr>
 																	<th>No</th>
-																	<th>Nama Supplier</th>
+																	<th>Nama Reseller</th>
 																	<th>Tanggal Proses</th>
 																	<th>Total Transaksi</th>
 																	<th>Status Pesan</th>
@@ -255,39 +253,39 @@
 																<?php
 																$no = 1;
 																foreach ($transaksi as $key => $value) {
-																	if ($value->status_pesan == '2') {
+																	if ($value->status_transaksi == '2') {
 
 																?>
 																		<tr>
 																			<td><?= $no++ ?></td>
-																			<td><?= $value->nama_supplier ?></td>
-																			<td><?= $value->tgl_pesan ?></td>
-																			<td>Rp. <?= number_format($value->total_pesan) ?></td>
+																			<td><?= $value->nama_user ?></td>
+																			<td><?= $value->tgl_transaksi ?></td>
+																			<td>Rp. <?= number_format($value->total_transaksi) ?></td>
 																			<td><?php
-																				if ($value->status_pesan == '0') {
+																				if ($value->status_transaksi == '0') {
 																				?>
 																					<span class="badge badge-danger">Belum Bayar</span>
 																				<?php
-																				} else if ($value->status_pesan == '1') {
+																				} else if ($value->status_transaksi == '1') {
 																				?>
 																					<span class="badge badge-warning">Menunggu Konfirmasi</span>
 																				<?php
-																				} else if ($value->status_pesan == '2') {
+																				} else if ($value->status_transaksi == '2') {
 																				?>
 																					<span class="badge badge-info">Pesanan Diproses</span>
 																				<?php
-																				} else if ($value->status_pesan == '3') {
+																				} else if ($value->status_transaksi == '3') {
 																				?>
 																					<span class="badge badge-primary">Pesanan Dikirim</span>
 																				<?php
-																				} else if ($value->status_pesan == '4') {
+																				} else if ($value->status_transaksi == '4') {
 																				?>
 																					<span class="badge badge-success">Selesai</span>
 																				<?php
 																				}
 																				?>
 																			</td>
-																			<td class="text-center"> <a href="<?= base_url('Admin/cTransaksiPadi/detail/' . $value->id_pesan) ?>" class="btn waves-effect waves-light btn-warning">
+																			<td class="text-center"> <a href="<?= base_url('Admin/cTransaksiBeras/detail/' . $value->id_transaksi) ?>" class="btn waves-effect waves-light btn-warning">
 																					Detail Pesanan
 																				</a></td>
 																		</tr>
@@ -316,7 +314,7 @@
 										<div class="accordion-content accordion-desc">
 											<div class="card">
 												<div class="card-header">
-													<h5>Informasi Pesanan Belum Bayar</h5>
+													<h5>Informasi Pesanan Dikirim</h5>
 													<div class="card-header-right">
 														<ul class="list-unstyled card-option">
 															<li><i class="fa fa fa-wrench open-card-option"></i></li>
@@ -333,7 +331,7 @@
 															<thead>
 																<tr>
 																	<th>No</th>
-																	<th>Nama Supplier</th>
+																	<th>Nama Reseller</th>
 																	<th>Tanggal Proses</th>
 																	<th>Total Transaksi</th>
 																	<th>Status Pesan</th>
@@ -344,39 +342,39 @@
 																<?php
 																$no = 1;
 																foreach ($transaksi as $key => $value) {
-																	if ($value->status_pesan == '3') {
+																	if ($value->status_transaksi == '3') {
 
 																?>
 																		<tr>
 																			<td><?= $no++ ?></td>
-																			<td><?= $value->nama_supplier ?></td>
-																			<td><?= $value->tgl_pesan ?></td>
-																			<td>Rp. <?= number_format($value->total_pesan) ?></td>
+																			<td><?= $value->nama_user ?></td>
+																			<td><?= $value->tgl_transaksi ?></td>
+																			<td>Rp. <?= number_format($value->total_transaksi) ?></td>
 																			<td><?php
-																				if ($value->status_pesan == '0') {
+																				if ($value->status_transaksi == '0') {
 																				?>
 																					<span class="badge badge-danger">Belum Bayar</span>
 																				<?php
-																				} else if ($value->status_pesan == '1') {
+																				} else if ($value->status_transaksi == '1') {
 																				?>
 																					<span class="badge badge-warning">Menunggu Konfirmasi</span>
 																				<?php
-																				} else if ($value->status_pesan == '2') {
+																				} else if ($value->status_transaksi == '2') {
 																				?>
 																					<span class="badge badge-info">Pesanan Diproses</span>
 																				<?php
-																				} else if ($value->status_pesan == '3') {
+																				} else if ($value->status_transaksi == '3') {
 																				?>
 																					<span class="badge badge-primary">Pesanan Dikirim</span>
 																				<?php
-																				} else if ($value->status_pesan == '4') {
+																				} else if ($value->status_transaksi == '4') {
 																				?>
 																					<span class="badge badge-success">Selesai</span>
 																				<?php
 																				}
 																				?>
 																			</td>
-																			<td class="text-center"> <a href="<?= base_url('Admin/cTransaksiPadi/detail/' . $value->id_pesan) ?>" class="btn waves-effect waves-light btn-warning">
+																			<td class="text-center"> <a href="<?= base_url('Admin/cTransaksiBeras/detail/' . $value->id_transaksi) ?>" class="btn waves-effect waves-light btn-warning">
 																					Detail Pesanan
 																				</a></td>
 																		</tr>
@@ -405,7 +403,7 @@
 										<div class="accordion-content accordion-desc">
 											<div class="card">
 												<div class="card-header">
-													<h5>Informasi Pesanan Belum Bayar</h5>
+													<h5>Informasi Pesanan Selesai</h5>
 													<div class="card-header-right">
 														<ul class="list-unstyled card-option">
 															<li><i class="fa fa fa-wrench open-card-option"></i></li>
@@ -422,7 +420,7 @@
 															<thead>
 																<tr>
 																	<th>No</th>
-																	<th>Nama Supplier</th>
+																	<th>Nama Reseller</th>
 																	<th>Tanggal Proses</th>
 																	<th>Total Transaksi</th>
 																	<th>Status Pesan</th>
@@ -433,39 +431,39 @@
 																<?php
 																$no = 1;
 																foreach ($transaksi as $key => $value) {
-																	if ($value->status_pesan == '4') {
+																	if ($value->status_transaksi == '4') {
 
 																?>
 																		<tr>
 																			<td><?= $no++ ?></td>
-																			<td><?= $value->nama_supplier ?></td>
-																			<td><?= $value->tgl_pesan ?></td>
-																			<td>Rp. <?= number_format($value->total_pesan) ?></td>
+																			<td><?= $value->nama_user ?></td>
+																			<td><?= $value->tgl_transaksi ?></td>
+																			<td>Rp. <?= number_format($value->total_transaksi) ?></td>
 																			<td><?php
-																				if ($value->status_pesan == '0') {
+																				if ($value->status_transaksi == '0') {
 																				?>
 																					<span class="badge badge-danger">Belum Bayar</span>
 																				<?php
-																				} else if ($value->status_pesan == '1') {
+																				} else if ($value->status_transaksi == '1') {
 																				?>
 																					<span class="badge badge-warning">Menunggu Konfirmasi</span>
 																				<?php
-																				} else if ($value->status_pesan == '2') {
+																				} else if ($value->status_transaksi == '2') {
 																				?>
 																					<span class="badge badge-info">Pesanan Diproses</span>
 																				<?php
-																				} else if ($value->status_pesan == '3') {
+																				} else if ($value->status_transaksi == '3') {
 																				?>
 																					<span class="badge badge-primary">Pesanan Dikirim</span>
 																				<?php
-																				} else if ($value->status_pesan == '4') {
+																				} else if ($value->status_transaksi == '4') {
 																				?>
 																					<span class="badge badge-success">Selesai</span>
 																				<?php
 																				}
 																				?>
 																			</td>
-																			<td class="text-center"> <a href="<?= base_url('Admin/cTransaksiPadi/detail/' . $value->id_pesan) ?>" class="btn waves-effect waves-light btn-warning">
+																			<td class="text-center"> <a href="<?= base_url('Admin/cTransaksiBeras/detail/' . $value->id_transaksi) ?>" class="btn waves-effect waves-light btn-warning">
 																					Detail Pesanan
 																				</a></td>
 																		</tr>
@@ -496,47 +494,4 @@
 		</div>
 	</div>
 </div>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<form action="<?= base_url('Admin/cTransaksiPadi/create') ?>" method="POST" role="form">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Supplier</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-
-					<div class="card-body">
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="form-group">
-									<label for="exampleInputEmail1">Nama Supplier</label>
-									<select class="form-control" name="supplier">
-										<option value="">---Pilih Supplier---</option>
-										<?php
-										foreach ($supplier as $key => $value) {
-										?>
-											<option value="<?= $value->id_supplier ?>"><?= $value->nama_supplier ?></option>
-										<?php
-										}
-										?>
-									</select>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="submit" class="btn btn-primary">Save changes</button>
-				</div>
-			</div>
-		</form>
-	</div>
 </div>
