@@ -28,6 +28,15 @@
  <!-- custom js -->
  <script type="text/javascript" src="<?= base_url('asset/mega-able-lite/') ?>assets/pages/dashboard/custom-dashboard.js"></script>
  <script type="text/javascript" src="<?= base_url('asset/mega-able-lite/') ?>assets/js/script.js "></script>
+ <script src="<?= base_url('asset/chart/js_chart.js') ?>"></script>
+ <link href="<?= base_url('asset/') ?>DataTable/datatables.min.css" rel="stylesheet">
+
+ <script src="<?= base_url('asset/') ?>DataTable/datatables.min.js"></script>
+ <script>
+ 	$('.myTable').DataTable({
+ 		select: true
+ 	});
+ </script>
  <script>
  	console.log = function() {}
  	$("#bb").on('change', function() {

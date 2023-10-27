@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Mega Able bootstrap admin template by codedthemes </title>
+	<title>REGISTRASI RESELLER</title>
 	<!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 10]>
@@ -159,7 +159,7 @@
 								<div class="row m-t-30">
 									<div class="col-md-12">
 										<button type="submit" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Sign in</button>
-										<p>Apakah anda belum memiliki akun Reseller? <a href="<?= base_url('cLogin/registrasi') ?>">Registrasi Here!</a></p>
+										<p>Apakah sudah belum memiliki akun Reseller? <a href="<?= base_url('cLogin') ?>">Login Here!</a></p>
 									</div>
 								</div>
 

@@ -88,14 +88,14 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-7 col-lg-7">
+						<div class="col-md-12 col-lg-12">
 							<div class="card">
 								<div class="card-header">
 									<h3 class="card-title">Informasi Keranjang</h3>
 								</div>
 								<!-- /.card-header -->
 								<div class="card-body">
-									<table class="table table-striped">
+									<table class="myTable table table-striped">
 										<thead>
 											<tr>
 												<th>#</th>
@@ -124,18 +124,20 @@
 											<?php
 											}
 											?>
-											<form action="<?= base_url('Admin/cTransaksiPadi/selesai') ?>" method="POST">
-												<input type="hidden" name="id_supplier" value="<?= $id_supplier ?>">
 
-												<tr>
+
+											<tr>
+												<form action="<?= base_url('Admin/cTransaksiPadi/selesai') ?>" method="POST">
+													<input type="hidden" name="id_supplier" value="<?= $id_supplier ?>">
 													<td><button type="submit" class="btn btn-success btn-sm"><i class="ti-angle-right"></i> Selesai</button></td>
 													<td>&nbsp;</td>
 													<td>&nbsp;</td>
 													<td>&nbsp;</td>
 													<td>Total: </td>
 													<td><strong>Rp.<?= number_format($this->cart->total())  ?></strong></td>
-												</tr>
-											</form>
+												</form>
+											</tr>
+
 										</tbody>
 									</table>
 								</div>

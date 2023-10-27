@@ -60,7 +60,7 @@
 												</div>
 												<div class="card-block table-border-style">
 													<div class="table-responsive">
-														<table class="table">
+														<table class="myTable table">
 															<thead>
 																<tr>
 																	<th>No</th>
@@ -149,7 +149,7 @@
 												</div>
 												<div class="card-block table-border-style">
 													<div class="table-responsive">
-														<table class="table">
+														<table class="myTable table">
 															<thead>
 																<tr>
 																	<th>No</th>
@@ -238,7 +238,7 @@
 												</div>
 												<div class="card-block table-border-style">
 													<div class="table-responsive">
-														<table class="table">
+														<table class="myTable table">
 															<thead>
 																<tr>
 																	<th>No</th>
@@ -327,7 +327,7 @@
 												</div>
 												<div class="card-block table-border-style">
 													<div class="table-responsive">
-														<table class="table">
+														<table class="myTable table">
 															<thead>
 																<tr>
 																	<th>No</th>
@@ -416,7 +416,7 @@
 												</div>
 												<div class="card-block table-border-style">
 													<div class="table-responsive">
-														<table class="table">
+														<table class="myTable table">
 															<thead>
 																<tr>
 																	<th>No</th>

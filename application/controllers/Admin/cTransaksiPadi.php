@@ -92,7 +92,7 @@ class cTransaksiPadi extends CI_Controller
 			$this->mTransaksiPadi->insert_detail($pesanan);
 		}
 		$this->cart->destroy();
-		$this->session->set_flashdata('success', 'Transaksi berhasil Dikirim!');
+		$this->session->set_flashdata('success', 'Transaksi berhasil Dipesan!');
 		redirect('Admin/cTransaksiPadi');
 	}
 	public function detail($id)

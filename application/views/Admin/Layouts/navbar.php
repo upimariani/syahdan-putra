@@ -177,8 +177,10 @@
 
 							<div class="pcoded-navigation-label" data-i18n="nav.category.forms">Laporan</div>
 							<ul class="pcoded-item pcoded-left-item">
-								<li>
-									<a href="<?= base_url('Admin/cPeramalan') ?>" class="waves-effect waves-dark">
+								<li class=" <?php if ($this->uri->segment(1) == 'Admin' && $this->uri->segment(2) == 'cAnalisis') {
+												echo 'active';
+											}  ?>">
+									<a href="<?= base_url('Admin/cAnalisis') ?>" class="waves-effect waves-dark">
 										<span class="pcoded-micon"><i class="ti-bar-chart"></i><b>FC</b></span>
 										<span class="pcoded-mtext" data-i18n="nav.form-components.main">Analisis Peramalan</span>
 										<span class="pcoded-mcaret"></span>
